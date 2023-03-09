@@ -1,9 +1,12 @@
-function solucao(palpite, palavra) {
-  let acertos = 0;
-  for (let i = 0; i < palavra.length; i++) {
-    if (palpite === palavra[i]) {
-      acertos++;
+function solucao(resultados) {
+  let total = 0;
+  for (let i = 0; i < resultados.length; i++) {
+    if (resultados[i] === "V") {
+      total += 3;
+    }
+    if (resultados[i] === "E") {
+      total += 1;
     }
   }
-  console.log(acertos);
+  console.log(total);
 }
